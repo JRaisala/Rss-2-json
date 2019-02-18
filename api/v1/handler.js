@@ -7,8 +7,12 @@ let parser = new Parser();
 const Handler = {
 	RssToJson: {
 	  handler: async (request, h) => {
+
+		const rss_url = request.query.rss_url
+
+		console.log(rss_url)
 		
-		let feed = await parser.parseURL('https://www.iltalehti.fi/rss/uutiset.xml');
+		let feed = await parser.parseURL(rss_url);
 
 		return h.response(feed)
 	  },
