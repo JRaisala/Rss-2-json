@@ -1,0 +1,26 @@
+{
+  "name": "RSS-2-Json",
+  "version": "1.0.0",
+  "description": "Convert RSS to Json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JRaisala/Rss-to-json.git"
+  },
+  "author": "JRaisala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JRaisala/Rss-to-json/issues"
+  },
+  "homepage": "https://github.com/JRaisala/Rss-to-json#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "hapi": "^18.1.0",
+    "path": "^0.12.7",
+    "rss-to-json": "^1.0.4"
+  }
+}
