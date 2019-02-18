@@ -16,7 +16,7 @@ async function start () {
 	// register plugins to server instance
 	await server.register([
 		{ 
-			plugin: require('./src/rss-to-json') 
+			plugin: require('./api/v1/')
 		}
 	])
 
