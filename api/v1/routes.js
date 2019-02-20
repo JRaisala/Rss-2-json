@@ -5,7 +5,7 @@ const Handler = require('./handler')
 const Routes = [
   {
     method: 'GET',
-    path: '/',
+	path: '/RSS2JSON/',
 	config: Handler.RssToJson
   }
 ]

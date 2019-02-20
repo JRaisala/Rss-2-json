@@ -13,21 +13,22 @@ const Handler = {
 		const rss_url = request.query.rss_url
 		
 		async function getFeed(){
+			//Use parser to turn RSS to JSON
 			let feed = await parser.parseURL(rss_url);
+			//Slice out the number of items needed
+			let slicedFeed = feed.items.slice(0, rss_count);
 
-			let feed2 = feed.items.slice(0, rss_count);
-
-			return feed2
+			return slicedFeed
 		}
 
-	
 		let myFeed = await getFeed();
 
 		console.log(myFeed)
 
 
 		return h.response(myFeed)
-	  }
+	  },
+	  tags: ['api', 'RSS2JSON'] 
 	}
 }
 
